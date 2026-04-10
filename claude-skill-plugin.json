@@ -1,0 +1,102 @@
+{
+  "type": "claude-skill-plugin",
+  "metadata": {
+    "name": "Layover Destination Designer",
+    "version": "1.0.0",
+    "author": "naagdev",
+    "description": "Discover the perfect layover destination using AI-powered multi-agent orchestration",
+    "skills": [
+      {
+        "name": "Plan Layover Destination",
+        "id": "layover-destination-planner",
+        "description": "Find optimal 2-6 day layover destinations based on personal preferences, budget, and travel style",
+        "trigger": [
+          "layover planning",
+          "layover recommendation",
+          "layover destination",
+          "find layover",
+          "plan my layover"
+        ],
+        "skillMarkdown": "SKILL.md"
+      }
+    ]
+  },
+  "integration": {
+    "type": "markdown-based",
+    "format": "skill-markdown",
+    "invocationMethod": "direct-prompt-injection",
+    "escalationSupported": true
+  },
+  "requirements": {
+    "apis": [
+      {
+        "name": "Anthropic Claude API",
+        "version": ">=3.5",
+        "required": true
+      }
+    ],
+    "externalServices": [
+      {
+        "name": "Reddit API (optional)",
+        "for": "Research data gathering"
+      },
+      {
+        "name": "Google Flights (optional)",
+        "for": "Transport pricing"
+      },
+      {
+        "name": "YouTube API (optional)",
+        "for": "Video recommendations"
+      }
+    ]
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Context Gathering",
+      "agent": "Haiku",
+      "description": "Progressive questioning to understand traveler profile"
+    },
+    {
+      "phase": 2,
+      "name": "Complexity Resolution",
+      "agent": "Sonnet",
+      "description": "Clarifying questions for conflicting preferences"
+    },
+    {
+      "phase": 3,
+      "name": "Preferences Deep-Dive",
+      "agent": "Haiku",
+      "description": "Detailed exploration of vibe, safety, budget, and logistics"
+    },
+    {
+      "phase": 4,
+      "name": "Research & Clustering",
+      "agent": "Sonnet",
+      "description": "Research destinations and cluster into optimal groups"
+    },
+    {
+      "phase": 5,
+      "name": "Final Recommendation",
+      "agent": "Opus",
+      "description": "Decision-making with weighted framework and ranking"
+    }
+  ],
+  "output": {
+    "format": "interactive-markdown",
+    "sections": [
+      "Top Recommendations (ranked 1-3)",
+      "Destination Details (safety, culture, activity, logistics)",
+      "Budget Breakdown",
+      "Transport Options & Pricing",
+      "YouTube Video Recommendations",
+      "Booking Links",
+      "Interactive Comparison Tool"
+    ]
+  },
+  "examples": {
+    "useCase1": "Professional with travel companion planning cultural European layover",
+    "useCase2": "First-time traveler seeking adventure and authentic local experience",
+    "useCase3": "Budget-conscious backpacker with flexible timeline"
+  }
+}

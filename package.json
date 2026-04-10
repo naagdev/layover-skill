@@ -1,0 +1,42 @@
+{
+  "name": "layover-destination-skill",
+  "version": "1.0.0",
+  "description": "AI-powered multi-agent framework for discovering the perfect layover destination",
+  "type": "module",
+  "main": "layover-planner.js",
+  "bin": {
+    "layover-planner": "layover-planner.js"
+  },
+  "scripts": {
+    "start": "node layover-planner.js",
+    "help": "node layover-planner.js --help"
+  },
+  "keywords": [
+    "travel",
+    "layover",
+    "destination",
+    "recommendation",
+    "claude",
+    "ai",
+    "multi-agent"
+  ],
+  "author": "naagdev",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naagdev/layover-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/naagdev/layover-skill/issues"
+  },
+  "homepage": "https://github.com/naagdev/layover-skill#readme"
+}

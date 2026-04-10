@@ -1,0 +1,62 @@
+{
+  "name": "Layover Destination Designer",
+  "slug": "layover-destination-skill",
+  "version": "1.0.0",
+  "description": "AI-powered multi-agent framework for discovering the perfect layover destination (2-6 days in 1-2 countries) tailored to individual preferences",
+  "author": "naagdev",
+  "license": "MIT",
+  "keywords": [
+    "travel",
+    "layover",
+    "destination",
+    "multi-agent",
+    "recommendation",
+    "planning"
+  ],
+  "capabilities": [
+    "Progressive adaptive questioning",
+    "Complexity detection and escalation",
+    "Research-backed recommendations",
+    "Destination clustering and scoring",
+    "Budget breakdown analysis",
+    "Transport pricing integration",
+    "Video recommendations"
+  ],
+  "agents": [
+    {
+      "name": "Haiku",
+      "role": "Progressive Questioner",
+      "description": "Asks adaptive questions to gather traveler preferences and detect complexity"
+    },
+    {
+      "name": "Sonnet",
+      "role": "Complexity Resolver",
+      "description": "Frames clarifying questions when trade-offs exist and conducts research"
+    },
+    {
+      "name": "Opus",
+      "role": "Final Recommendation",
+      "description": "Evaluates clusters with weighted framework and ranks top recommendations"
+    }
+  ],
+  "entryPoint": "SKILL.md",
+  "documentation": {
+    "quick-start": "IMPLEMENTATION.md",
+    "examples": "EXAMPLES.md",
+    "prompts": "PROMPTS.md",
+    "setup": "SETUP.md",
+    "readme": "README.md"
+  },
+  "repository": "https://github.com/naagdev/layover-skill",
+  "tags": [
+    "travel-planning",
+    "ai-orchestration",
+    "destination-recommendation",
+    "multi-agent-ai"
+  ],
+  "compatibility": {
+    "minClaudeVersion": "3.5-sonnet",
+    "requiredModels": ["claude-3-5-haiku", "claude-3-5-sonnet", "claude-opus"],
+    "platform": ["claude.ai", "claude-api"]
+  }
+}
